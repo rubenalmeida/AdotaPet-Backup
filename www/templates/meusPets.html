@@ -1,0 +1,34 @@
+<ion-view title="Meus Pets">
+    <ion-content padding="true" class="has-header" style="background: url('../img/meuspets-back.jpg') no-repeat right">
+
+        <ion-list>
+
+            <ion-item class="item-avatar item-icon-right" ng-repeat="(key , pet) in myPets">
+                <img src="{{pet.imgURL}}">
+                <h2>{{pet.nome}}
+                    <p>Em Adoção</p>
+                    <a class="button button-icon icon ion-edit" ng-click="alterarPet(pet, key)"></a>
+                </h2>
+
+                <ion-option-button ng-click="marcarAdotado(pet, key)">
+                    <button class="button button-icon icon ion-locked assertive"></button>
+                </ion-option-button>
+
+            </ion-item>
+
+
+        </ion-list>
+
+        <ion-list>
+
+            <ion-item class="item-avatar item-icon-right" ng-repeat="(key , pet) in adotados">
+                <img src="{{pet.imgURL}}">
+                <h2>{{pet.nome}}
+                    <p>Adotado</p>
+                    <a class="button button-icon icon ion-ios-undo" ng-click="marcarDisponivel(pet, key)"></a>
+                </h2>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view title="Adote" id="adote">
+
+    <ion-content class="has-header" style="background: url('../img/back-home.jpg') no-repeat">
+
+        <div class="row responsive-sm">
+            <div class="col-50" ng-click="detalharPet(pet.key)" ng-repeat="(key , pet) in pets">
+                <div class="card">
+
+                    <div class="item item-image">
+                        <img src="{{pet.val.imgURL}}">
+                    </div>
+                    <ion-item>
+                        <h2>{{pet.val.nome}}</h2>
+                        <p>{{pet.val.raca}}</p>
+                    </ion-item>
+
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
